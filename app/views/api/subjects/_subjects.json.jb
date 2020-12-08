@@ -1,0 +1,4 @@
+{
+  id: subject.id,
+  name: subject.name,
+}
