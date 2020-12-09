@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
     get "/subjects" => "subjects#index"
     get "/subjects/:id" => "subjects#show"
-    get "/subjects/params[:name]" => "subjects#show"
+    # get "/subjects/params[:name]" => "subjects#show"
 
     get "/songs" => "songs#index"
     get "/songs/:id" => "songs#show"
