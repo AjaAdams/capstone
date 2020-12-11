@@ -1,0 +1,10 @@
+{
+  title: song.title,
+  artist: song.artist,
+  feature: song.featuring,
+  album: song.album,
+  year: song.year,
+  image_url: song.image_url,
+  genre: song.genre,
+  lyrics: song.lyrics,
+}

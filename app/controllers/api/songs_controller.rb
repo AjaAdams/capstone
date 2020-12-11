@@ -6,7 +6,7 @@ class Api::SongsController < ApplicationController
 
   def show
     input_value = params[:id]
-    @songs = Song.find_by(id: input_value)
+    @song = Song.find_by(id: input_value)
     render "show.json.jb"
   end
 end
