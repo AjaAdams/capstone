@@ -1,4 +1,6 @@
 {
   id: subject.id,
   name: subject.name,
+  songs: subject.songs.order(:title),
+
 }

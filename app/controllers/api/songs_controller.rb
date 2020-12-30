@@ -1,12 +1,11 @@
 class Api::SongsController < ApplicationController
   def index
-    @songs = Song.all
+    @songs = Song.all.order(title: :asc)
     render "index.json.jb"
   end
 
   def show
-    input_value = params[:id]
-    @song = Song.find_by(id: input_value)
+    @song = Song.find_by(id: params[:id])
     render "show.json.jb"
   end
 
