@@ -5,7 +5,10 @@ class Api::SubjectsController < ApplicationController
   end
 
   def show
-    @subject = Subject.find_by(params[:id])
+    @subject = Subject.find_by(id: params[:id])
     render "show.json.jb"
   end
 end
+
+# if songs == true
+# end
