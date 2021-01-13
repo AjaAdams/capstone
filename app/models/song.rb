@@ -12,8 +12,9 @@ class Song < ApplicationRecord
   # end
 
   def preview_url
-    # song = Song.find(params[:id])
-    track = RSpotify::Track.search('Thriller')
+    @song = Song.find(2)
+    @song = @song.title
+    track = RSpotify::Track.search(@song)
     track = track.first.preview_url
   end
 end
