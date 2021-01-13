@@ -9,12 +9,15 @@ Rails.application.routes.draw do
     delete "/sessions/:id" => "sessions#destroy"
 
     get "/subjects" => "subjects#index"
-    get "/subjects/:id" => "subjects#show"
+    get "/subjects/:name" => "subjects#show"
 
     get "/songs" => "songs#index"
     get "/songs/:id" => "songs#show"
     post "/songs" => "songs#create"
+    patch "/songs/:id" => "songs#update"
 
     post "/users" => "users#create"
+
+    get "/auth/spotify/callback" => "users#spotify"
   end
 end

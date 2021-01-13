@@ -9,6 +9,21 @@ class Api::SongsController < ApplicationController
     render "show.json.jb"
   end
 
+  def update
+    song_id = params[:id]
+    @song = Song.find_by(id: song_id)
+    
+    @song.lyrics = params["lyrics"] || @song.lyrics
+
+    @song.save
+
+    if @song.save
+      render "show.json.jb"
+    else
+      render json: { errors: @song.errors.full_messages }, status: :bad_request
+    end
+  end
+
   def create
     @song = Song.new(
       title: params[:title],

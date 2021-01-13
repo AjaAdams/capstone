@@ -8,5 +8,6 @@
   image_url: song.image_url,
   genre: song.genre,
   lyrics: song.lyrics,
-  subjects: song.subjects.order(:name),
+  preview_url: song.preview_url,
+  subjects: song.subjects.order(:name)
 }

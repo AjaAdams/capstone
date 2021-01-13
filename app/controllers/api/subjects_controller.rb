@@ -5,7 +5,7 @@ class Api::SubjectsController < ApplicationController
   end
 
   def show
-    @subject = Subject.find_by(id: params[:id])
+    @subject = Subject.find_by(name: params[:name])
     render "show.json.jb"
   end
 end

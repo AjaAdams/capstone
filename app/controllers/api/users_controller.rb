@@ -13,4 +13,14 @@ class Api::UsersController < ApplicationController
       render json: { errors: user.errors.full_messages }, status: :bad_request
     end
   end
+
+  def spotify
+    spotify_user = RSpotify::User.new(request.env['omniauth.auth'])
+
+    # Add tracks to a playlist in user's Spotify account
+    tracks = RSpotify::Track.search('Know')
+    playlist.add_tracks!(tracks)
+    playlist.tracks.first.name #=> "Somebody That I Used To Know"
+ 
+  end
 end

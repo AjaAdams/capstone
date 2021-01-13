@@ -26,6 +26,8 @@ module Capstone
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
+    RSpotify::authenticate("3eb1d1e882924e078defd9e195c759b8", "0e10cd8d2c964ff2b950e58e0d3ab7cd")
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
