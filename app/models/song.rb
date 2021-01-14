@@ -11,10 +11,11 @@ class Song < ApplicationRecord
   #   # render json: response.parse
   # end
 
-  def preview_url
-    @song = Song.find(2)
-    @song = @song.title
-    track = RSpotify::Track.search(@song)
-    track = track.first.preview_url
-  end
+  # def preview_url_spotify
+  #   # @song = Song.find(1)
+  #   # @song = @song.title
+  #   track = RSpotify::Track.search('Hello')
+  #   track = track.first.preview_url
+  # end
+
 end
