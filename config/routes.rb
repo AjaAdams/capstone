@@ -19,5 +19,7 @@ Rails.application.routes.draw do
     post "/users" => "users#create"
 
     get "/auth/spotify/callback" => "users#spotify"
+
+    get "/*path" => proc { [200, {}, [ActionView::Base.new.render(file: 'public/index.html')]] }
   end
 end
